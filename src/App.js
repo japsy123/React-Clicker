@@ -8,13 +8,20 @@ class App extends React.Component {
     this.state = {
       number: 1
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({
+      number: 2
+    }));
   }
 
   render() {
     return (
       <div className="App">
         <header>Number: {this.state.number}</header>
-        <button>Generate Random number </button>
+        <button onClick={this.handleClick}>Generate Random number </button>
       </div>
     );
   }
