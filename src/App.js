@@ -20,8 +20,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header>Number: {this.state.number}</header>
-        <button onClick={this.handleClick}>Generate Random number </button>
+        <header>
+          Number: {this.state.number === 7 ? "You Win" : this.state.number}
+        </header>
+        <button
+          onClick={this.handleClick}
+          disabled={this.state.number === 7 ? true : false}
+        >
+          Generate Random number{" "}
+        </button>
       </div>
     );
   }
