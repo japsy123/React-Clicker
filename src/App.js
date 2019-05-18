@@ -13,7 +13,7 @@ class App extends React.Component {
 
   handleClick() {
     this.setState(prevState => ({
-      number: 2
+      number: Math.floor(Math.random() * 7 + 1)
     }));
   }
 
